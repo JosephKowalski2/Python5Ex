@@ -42,7 +42,7 @@ def gen_list_of_nums(n: int) -> List[int]:
     :param n: The number of items the result should contain
     :return: A list of integers
     """
-    pass  # remove pass statement and implement me
+    return list(range(0, n))
 
 
 def half_list(list_in: List, half: int) -> List:
@@ -54,7 +54,13 @@ def half_list(list_in: List, half: int) -> List:
     If the length of list_in is an odd number, round the half value up (hint: math.ceil()).
     :return: A list.
     """
-    pass  # remove pass statement and implement me
+    import math
+    i = math.ceil(len(list_in) / 2)
+    if half == 1:
+        half_of_list = list_in[:i]
+    else:
+        half_of_list = list_in[-i:]
+    return half_of_list
 
 
 def remove_odds(list_in: List[int]) -> None:
@@ -63,7 +69,10 @@ def remove_odds(list_in: List[int]) -> None:
 
     :return: None
     """
-    pass  # remove pass statement and implement me
+    for i in list_in:
+        if i % 2 != 0:
+            list_in.remove(i)
+    return list_in
 
 
 def remove_evens(list_in: List[int]) -> None:
@@ -72,7 +81,10 @@ def remove_evens(list_in: List[int]) -> None:
 
     :return: None
     """
-    pass  # remove pass statement and implement me
+    for i in list_in:
+        if i % 2 == 0:
+            list_in.remove(i)
+    return list_in
 
 
 def concatenate_lists(list_a: List, list_b: List) -> List:
@@ -83,7 +95,7 @@ def concatenate_lists(list_a: List, list_b: List) -> List:
     :param list_b: Another list
     :return: A list containing all elements from list_a and list_b
     """
-    pass  # remove pass statement and implement me
+    return list_a + list_b
 
 
 def multiply_list(list_in: List, scalar: int) -> List:
@@ -95,4 +107,4 @@ def multiply_list(list_in: List, scalar: int) -> List:
     :param scalar: An integer
     :return: A list
     """
-    pass  # remove pass statement and implement me
+    return list_in * scalar
